@@ -78,7 +78,9 @@ Association Rules:
 0     (milk)     (bread)     0.50       0.80     1.07
 1    (bread)     (milk)      0.50       0.75     1.07
 2    (milk)    (butter)     0.50       0.67     1.33
+
 📌 Interpretation
+
 Support: How often the itemset appears in transactions.
 
 Confidence: How often the rule is correct (given the antecedent, how often is the consequent also purchased).
@@ -90,6 +92,7 @@ Example:
 80% of the time milk is purchased, bread is purchased too.
 
 🚀 Applications
+
 Product placement in stores.
 
 Cross-selling recommendations in e-commerce.
@@ -97,4 +100,5 @@ Cross-selling recommendations in e-commerce.
 Targeted promotions.
 
 📚 Requirements
+
 !pip install apyori
