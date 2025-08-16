@@ -17,7 +17,7 @@ milk,bread
 milk,bread,butter,eggs
 ```
 
-⚙️ Steps
+## ⚙️ Steps
 
 Read the Transaction Data
 
@@ -45,7 +45,7 @@ Output Predictions
 
 The most likely product combinations are listed, along with their support, confidence, and lift.
 
-🖥️ Example Python Code
+## 🖥️ Example Python Code
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -80,7 +80,7 @@ Association Rules:
 1    (bread)     (milk)      0.50       0.75     1.07
 2    (milk)    (butter)     0.50       0.67     1.33
 
-📌 Interpretation
+## 📌 Interpretation
 
 Support: How often the itemset appears in transactions.
 
@@ -92,7 +92,7 @@ Example:
 (milk) → (bread) with confidence 0.80 means:
 80% of the time milk is purchased, bread is purchased too.
 
-🚀 Applications
+## 🚀 Applications
 
 Product placement in stores.
 
@@ -100,6 +100,6 @@ Cross-selling recommendations in e-commerce.
 
 Targeted promotions.
 
-📚 Requirements
+## 📚 Requirements
 
 !pip install apyori
