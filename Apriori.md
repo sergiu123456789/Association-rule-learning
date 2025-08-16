@@ -46,17 +46,18 @@ Output Predictions
 The most likely product combinations are listed, along with their support, confidence, and lift.
 
 ## 🖥️ Example Python Code
-
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-
+```
 # Apply Apriori & Generate rules
+```python
 from apyori import apriori
 rules = apriori(transactions = transactions, min_support = 0.003, min_confidence = 0.2, min_lift = 3, min_length = 2, max_length = 2)
-
+```
 # Putting the results well organised into a Pandas DataFrame
-
+```python
 def inspect(results):
     lhs         = [tuple(result[2][0][0])[0] for result in results]
     rhs         = [tuple(result[2][0][1])[0] for result in results]
@@ -65,7 +66,7 @@ def inspect(results):
     lifts       = [result[2][0][3] for result in results]
     return list(zip(lhs, rhs, supports, confidences, lifts))
 resultsinDataFrame = pd.DataFrame(inspect(results), columns = ['Left Hand Side', 'Right Hand Side', 'Support', 'Confidence', 'Lift'])
-
+```
 Frequent Itemsets:
    support        itemsets
 0     0.75       (bread)
