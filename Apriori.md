@@ -68,19 +68,21 @@ def inspect(results):
 resultsinDataFrame = pd.DataFrame(inspect(results), columns = ['Left Hand Side', 'Right Hand Side', 'Support', 'Confidence', 'Lift'])
 ```
 Frequent Itemsets:
+```csv
    support        itemsets
 0     0.75       (bread)
 1     0.75        (milk)
 2     0.50       (butter)
 3     0.50   (bread, milk)
 4     0.50  (milk, butter)
-
+```
 Association Rules:
+```csv
    antecedents consequents  support  confidence      lift
 0     (milk)     (bread)     0.50       0.80     1.07
 1    (bread)     (milk)      0.50       0.75     1.07
 2    (milk)    (butter)     0.50       0.67     1.33
-
+```
 ## 📌 Interpretation
 
 Support: How often the itemset appears in transactions.
