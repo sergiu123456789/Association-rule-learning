@@ -72,17 +72,17 @@ Frequent Itemsets:
 ```csv
    support        itemsets
 0     0.75       (bread)
-1     0.75        (milk)
+1     0.75       (milk)
 2     0.50       (butter)
-3     0.50   (bread, milk)
-4     0.50  (milk, butter)
+3     0.50       (bread, milk)
+4     0.50       (milk, butter)
 ```
 Association Rules:
 ```csv
    antecedents consequents  support 
-0     (milk)     (bread)     0.50      
+0    (milk)     (bread)      0.50      
 1    (bread)     (milk)      0.50      
-2    (milk)    (butter)     0.50      
+2    (milk)     (butter)     0.50      
 ```
 ## 📌 Interpretation
 
