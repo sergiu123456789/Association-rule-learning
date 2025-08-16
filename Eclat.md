@@ -16,7 +16,7 @@ bread,eggs
 milk,bread
 milk,bread,butter,eggs
 
-⚙️ Steps
+## ⚙️ Steps
 
 Read the Transaction Data
 
@@ -44,29 +44,30 @@ Output Predictions
 
 The most likely product combinations are listed, along with their support, confidence, and lift.
 
-🖥️ Example Python Code
-
+## 🖥️ Example Python Code
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-
+```
 # Apply Eclat & Generate rules
+```python
 transactions = []
 for i in range(0, 7501):
   transactions.append([str(dataset.values[i,j]) for j in range(0, 20)])
 from apyori import apriori
 rules = apriori(transactions = transactions, min_support = 0.003, min_confidence = 0.2, min_lift = 3, min_length = 2, max_length = 2)
 results = list(rules)
-
+```
 # Putting the results well organised into a Pandas DataFrame
-
+```python
 def inspect(results):
     lhs         = [tuple(result[2][0][0])[0] for result in results]
     rhs         = [tuple(result[2][0][1])[0] for result in results]
     supports    = [result[1] for result in results]
     return list(zip(lhs, rhs, supports))
 resultsinDataFrame = pd.DataFrame(inspect(results), columns = ['Product 1', 'Product 2', 'Support'])
-
+```
 Frequent Itemsets:
    support        itemsets
 0     0.75       (bread)
@@ -81,11 +82,11 @@ Association Rules:
 1    (bread)     (milk)      0.50      
 2    (milk)    (butter)     0.50      
 
-📌 Interpretation
+## 📌 Interpretation
 
 Support: How often the itemset appears in transactions.
 
-🚀 Applications
+## 🚀 Applications
 
 Product placement in stores.
 
@@ -93,6 +94,6 @@ Cross-selling recommendations in e-commerce.
 
 Targeted promotions.
 
-📚 Requirements
+## 📚 Requirements
 
 !pip install apyori
