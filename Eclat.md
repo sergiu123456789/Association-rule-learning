@@ -34,15 +34,9 @@ Find frequent itemsets with a given minimum support.
 
 Example: support threshold = 0.5 means the itemset must appear in at least 50% of transactions.
 
-Generate Association Rules
-
-Rules are generated with a minimum confidence level.
-
-Example: milk → bread with confidence 0.8 means 80% of transactions containing milk also contain bread.
-
 Output Predictions
 
-The most likely product combinations are listed, along with their support, confidence, and lift.
+The most likely product combinations are listed, along with their support
 
 ## 🖥️ Example Python Code
 ```python
